@@ -8,9 +8,9 @@ def leerDatos():
             dato = f.readline()
 
 
-def escribirDato():
+def escribirDato(newUser):
     with open("datos", 'a') as f:
-        f.write ('@NombrePrueba\n')
+        f.write (newUser)
 
 if __name__ == '__main__':
     print('FOLLOWERS TWITTER\n')
@@ -24,6 +24,8 @@ if __name__ == '__main__':
         if opcion == 1:
             leerDatos() #De momento MUESTRA POR PANTALLA
         elif opcion == 2:
-            escribirDato() #TODO: implementar paso parametro
+            print('Escriba el usuario a añadir: ')
+            newUser = msvcrt.getche()
+            escribirDato(newUser) #TODO: implementar paso parametro
         print('\n')
     print('¡Hasta Luego!')
