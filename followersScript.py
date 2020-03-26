@@ -1,13 +1,16 @@
 import msvcrt
 
 def leerDatos():
+    print('\n')
     with open("datos", 'r') as f:
         dato = f.readline()
         while dato != '':
             print(dato, end='')
             dato = f.readline()
 
-def escribirDato(newUser):
+def escribirDato():
+    print('Escriba el usuario a añadir: ')
+    newUser = input()
     with open("datos", 'a') as f:
         f.write (newUser)
         f.write('\n')
@@ -37,17 +40,9 @@ if __name__ == '__main__':
         print('Para salir pulse 0')
         opcion = int (msvcrt.getche())
         switcher  = {
-            0: #salir
+            0: break#salir
             1: leerDatos()
             2: escribirDato()
             3: buscarUsuarios()
         }
-        if opcion == 1:
-            print('\n')
-            leerDatos() 
-        elif opcion == 2:
-            print('Escriba el usuario a añadir: ')
-            newUser = input()
-            escribirDato(newUser)
-        print('\n')
     print('¡Hasta Luego!')
