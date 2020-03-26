@@ -1,7 +1,7 @@
 import msvcrt
 
 def leerDatos():
-    with open("datos", 'a') as f:
+    with open("datos", 'r') as f:
         dato = f.readline()
         while dato != '':
             print(dato, end='')
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     opcion = 4
     #Display MENU
     while opcion != 0:
-        print('pulse 1 para buscar un user en la lista')
+        print('pulse 1 para mostrar users en la lista')
         print('Pulse 2 para añadir un nuevo user a la lista')
         print('Para salir pulse 0')
         opcion = int (msvcrt.getche())
