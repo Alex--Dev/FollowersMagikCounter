@@ -36,12 +36,18 @@ if __name__ == '__main__':
         print('Pulse 3 para buscar un usuario en la lista')
         print('Para salir pulse 0')
         opcion = int (msvcrt.getche())
+        switcher  = {
+            0: #salir
+            1: leerDatos()
+            2: escribirDato()
+            3: buscarUsuarios()
+        }
         if opcion == 1:
             print('\n')
-            leerDatos() #De momento MUESTRA POR PANTALLA
+            leerDatos() 
         elif opcion == 2:
             print('Escriba el usuario a añadir: ')
             newUser = input()
-            escribirDato(newUser) #TODO: implementar paso parametro
+            escribirDato(newUser)
         print('\n')
     print('¡Hasta Luego!')
